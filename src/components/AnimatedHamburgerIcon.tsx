@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 
-const AnimatedHamburgerIcon: React.FC = () => {
+export interface AnimatedHamburgerIconProps {
+  color?: string;
+  size?: number;
+  // Add any other props you want to expose
+}
+
+const AnimatedHamburgerIcon: React.FC<AnimatedHamburgerIconProps> = ({
+  color = "currentColor",
+  size = 24,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const lineStyle: React.CSSProperties = {
@@ -21,11 +30,11 @@ const AnimatedHamburgerIcon: React.FC = () => {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width={size}
+        height={size}
         viewBox="0 0 24 24"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
