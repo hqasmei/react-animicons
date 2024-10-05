@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/tailwind.css";
 export interface AnimatedSettingsIconProps {
     color?: string;
     size?: number;

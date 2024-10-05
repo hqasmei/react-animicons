@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../styles/tailwind.css";
 
 export interface AnimatedBellIconProps {
   color?: string;
@@ -12,8 +13,8 @@ const AnimatedBellIcon: React.FC<AnimatedBellIconProps> = ({
   ringDuration = 0.4,
 }) => {
   const [isAnimating, setIsAnimating] = useState(false);
-  const [ animationPhase, setAnimationPhase ] = useState( 0 );
-  
+  const [animationPhase, setAnimationPhase] = useState(0);
+
   useEffect(() => {
     if (isAnimating) {
       const timer = setTimeout(() => {

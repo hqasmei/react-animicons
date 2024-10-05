@@ -11,6 +11,7 @@ var __assign = (this && this.__assign) || function () {
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useState } from "react";
+import "../styles/tailwind.css";
 var AnimatedFoldersIcon = function (_a) {
     var _b = _a.color, color = _b === void 0 ? "currentColor" : _b, _c = _a.size, size = _c === void 0 ? 24 : _c;
     var _d = useState(false), isHovered = _d[0], setIsHovered = _d[1];

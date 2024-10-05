@@ -1,4 +1,5 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import "../styles/tailwind.css";
 var AnimatedSettingsIcon = function (_a) {
     var _b = _a.color, color = _b === void 0 ? "currentColor" : _b, _c = _a.size, size = _c === void 0 ? 24 : _c, _d = _a.spinDuration, spinDuration = _d === void 0 ? 0.5 : _d, _e = _a.className, className = _e === void 0 ? "" : _e;
     // Define dynamic classes

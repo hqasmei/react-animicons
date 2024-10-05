@@ -1,4 +1,3 @@
-import "./styles/tailwind.css";
 export { default as AnimatedHamburgerIcon } from "./components/AnimatedHamburgerIcon";
 export type { AnimatedHamburgerIconProps } from "./components/AnimatedHamburgerIcon";
 export { default as AnimatedFoldersIcon } from "./components/AnimatedFoldersIcon";

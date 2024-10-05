@@ -1,5 +1,6 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useState, useEffect } from "react";
+import "../styles/tailwind.css";
 var AnimatedBellIcon = function (_a) {
     var _b = _a.color, color = _b === void 0 ? "currentColor" : _b, _c = _a.size, size = _c === void 0 ? 24 : _c, _d = _a.ringDuration, ringDuration = _d === void 0 ? 0.4 : _d;
     var _e = useState(false), isAnimating = _e[0], setIsAnimating = _e[1];
