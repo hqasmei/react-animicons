@@ -1,15 +1,13 @@
 {
   "name": "react-animicons",
-  "version": "1.0.3",
-  "description": "A library of animated icons for React applications",
+  "version": "1.0.5",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.build.json && webpack --mode production",
-    "prepare": "npm run build"
+    "build": "tsc"
   },
   "keywords": [
     "react",
@@ -29,8 +27,9 @@
   },
   "homepage": "https://github.com/hqasmei/react-animicons#readme",
   "peerDependencies": {
-    "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0"
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "tailwindcss": "^3.4.13"
   },
   "devDependencies": {
     "@babel/core": "^7.25.7",
@@ -39,11 +38,14 @@
     "@babel/preset-typescript": "^7.25.7",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.20",
     "babel-loader": "^9.2.1",
     "css-loader": "^7.1.2",
+    "postcss": "^8.4.47",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "style-loader": "^4.0.0",
+    "tailwindcss": "^3.4.13",
     "ts-loader": "^9.5.1",
     "typescript": "^5.6.2",
     "webpack": "^5.95.0",

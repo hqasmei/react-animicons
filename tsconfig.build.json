@@ -1,9 +1,12 @@
 {
-  "extends": "./tsconfig.json",
-  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.test.tsx"],
   "compilerOptions": {
     "outDir": "dist",
     "declaration": true,
-    "emitDeclarationOnly": true
-  }
+    "declarationDir": "dist",
+    "noEmit": false,
+    "emitDeclarationOnly": false,
+    "module": "ESNext", // Ensure this is set to ESNext or ES6
+    "target": "ES5" // or ES6, depending on your needs
+  },
+  "include": ["src"]
 }

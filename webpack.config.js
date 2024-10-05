@@ -1,39 +1,47 @@
 const path = require("path");
 
-module.exports = {
-  entry: "./src/index.ts",
-  output: {
-    filename: "index.js",
-    path: path.resolve(__dirname, "dist"),
-    libraryTarget: "umd",
-    library: "MyReactComponents",
-    umdNamedDefine: true,
-    globalObject: "typeof self !== 'undefined' ? self : this",
-  },
-  resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx"],
-  },
-  externals: {
-    react: {
-      commonjs: "react",
-      commonjs2: "react",
-      amd: "React",
-      root: "React",
+module.exports = [
+  {
+    entry: "./src/index.ts",
+    output: {
+      filename: "index.js",
+      path: path.resolve(__dirname, "dist"),
+      libraryTarget: "commonjs2", // CommonJS output
     },
-    "react-dom": {
-      commonjs: "react-dom",
-      commonjs2: "react-dom",
-      amd: "ReactDOM",
-      root: "ReactDOM",
+    resolve: {
+      extensions: [".ts", ".tsx", ".js"],
+    },
+    module: {
+      rules: [
+        {
+          test: /\.tsx?$/,
+          use: "ts-loader",
+          exclude: /node_modules/,
+        },
+      ],
     },
   },
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: "babel-loader",
-        exclude: /node_modules/,
-      },
-    ],
+  {
+    entry: "./src/index.ts",
+    output: {
+      filename: "index.esm.js",
+      path: path.resolve(__dirname, "dist"),
+      libraryTarget: "module", // ES Module output
+    },
+    experiments: {
+      outputModule: true,
+    },
+    resolve: {
+      extensions: [".ts", ".tsx", ".js"],
+    },
+    module: {
+      rules: [
+        {
+          test: /\.tsx?$/,
+          use: "ts-loader",
+          exclude: /node_modules/,
+        },
+      ],
+    },
   },
-};
+];
